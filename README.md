@@ -44,6 +44,8 @@ This project showcases full-stack development, API integration, authentication f
 ---
 
 ## 📂 Project Structure
+
+```
 fastapi-sheets-project/
 │
 ├── app.py
@@ -51,7 +53,8 @@ fastapi-sheets-project/
 ├── token.pickle
 ├── requirements.txt
 └── templates/
-└── index.html
+      └── index.html
+```
 
 ---
 
@@ -77,41 +80,96 @@ fastapi-sheets-project/
 
 ### 1️⃣ Clone Repository
 
-```bash
+```
 git clone https://github.com/yourusername/fast-sheets-app.git
 cd fast-sheets-app
+```
 
-Install Dependencies
+### 2️⃣ Install Dependencies
+
+```
 pip install -r requirements.txt
+```
 
-Google Sheet Configuration
-Sheet must exist in your Google Drive
-Copy Spreadsheet ID from URL
-Update in app.py
-Sheet tab name must match:
+### 3️⃣ Configure Google Cloud
 
+- Enable **Google Sheets API**
+- Configure **OAuth consent screen**
+- Create **OAuth Client ID (Desktop App)**
+- Download `client_secret.json`
+- Place it in the root folder
+
+### 4️⃣ Run Server
+
+```
+uvicorn app:app --reload
+```
+
+Open in browser:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+## 📊 Google Sheet Configuration
+
+- Sheet must exist in your Google Drive  
+- Copy Spreadsheet ID from URL  
+- Update in `app.py`  
+- Sheet tab name must match:
+
+```
 Sheet1
+```
 
 Example format:
 
-Name	Email	Score
+| Name | Email | Score |
+|------|-------|-------|
 
-Deployment (Hugging Face Example)
-Create a new Space (Docker SDK)
-Upload:
-app.py
-requirements.txt
-templates/ folder
-client_secret.json
-token.pickle
-Add a Dockerfile
-Deploy
+---
 
-Author
+## 🚀 Deployment (Hugging Face Example)
 
-Namradha Mani
-Full Stack & Cloud Developer
+1. Create a new Space (Docker SDK)  
+2. Upload:
+   - `app.py`
+   - `requirements.txt`
+   - `templates/` folder
+   - `client_secret.json`
+   - `token.pickle`
+3. Add a Dockerfile  
+4. Deploy  
 
-⭐ Support
+---
+
+## 💼 Resume Description
+
+Developed a full-stack web application using FastAPI and Google Sheets API with OAuth2 authentication. Designed a responsive SaaS-style frontend and implemented secure real-time cloud data storage.
+
+---
+
+## 🔮 Future Enhancements
+
+- Add live dashboard view  
+- Integrate charts and analytics  
+- Implement JWT user authentication  
+- Convert frontend to React  
+- Add CI/CD pipeline  
+- Move credentials to environment variables  
+- Add role-based access control  
+
+---
+
+## 👩‍💻 Author
+
+**Namradha Mani**  
+Full Stack & Cloud Developer  
+
+---
+
+## ⭐ Support
+
 If you like this project, consider giving it a ⭐ on GitHub!
-
